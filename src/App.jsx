@@ -1,24 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Navbar from "./components/NavbarComponent/Navbar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Header from "./components/Header/Header";
 
-function App() {
+function App({greeting}) {
   return (
     <>
-      <header>
-        <h1>ELEMENTAL</h1>
-        <h2>Inspirado en la naturaleza</h2>
-      </header>
-
-      <nav>
-        <ul>
-          <li>aire</li>
-          <li>fuego</li>
-          <li>agua</li>
-          <li>tierra</li>
-        </ul>
-      </nav>
+      <Header />
+      <Navbar />
+      <ItemListContainer greeting="saludo inicial"/>
     </>
   );
 }

@@ -1,32 +1,3 @@
-/*titulo*/
-h1 {
-  font-family: "Dashley", sans-serif;
-  font-style: oblique;
-  letter-spacing: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  margin-top: 3rem;
-}
-/*subtitulo*/
-h2 {
-  font-family: "Asmbuh";
-  font-weight: lighter;
-  font-style: oblique;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4rem;
-}
-/*lista de elementos en nav*/
 
-nav ul li {
-  list-style-type: none;
-  font-family: "Dashley", sans-serif;
-}
 
-img {
-  max-width: 1.5rem;
-}
+

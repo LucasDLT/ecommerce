@@ -8,7 +8,7 @@ function App({greeting}) {
     <>
       <Header />
       <Navbar />
-      <ItemListContainer greeting="saludo inicial"/>
+      <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu"/>
     </>
   );
 }

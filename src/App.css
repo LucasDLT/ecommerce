@@ -1,3 +1,9 @@
 
+body{
+          background-image: url("../src/assets/home-option-2.jpg");
+          background-size: cover; 
+          background-position: initial; 
+          background-repeat: no-repeat; 
+          background-attachment: scroll; }
 
 

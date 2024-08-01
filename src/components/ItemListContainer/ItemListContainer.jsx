@@ -11,7 +11,8 @@ display :flex ;
 flex-direction: column;
  justify-content: center;
  align-items: center;
-  
+ background-size:cover;
+ background-position: center;
 `
 export const Greeting = styled(Title)`
  margin-top: 0.5rem;

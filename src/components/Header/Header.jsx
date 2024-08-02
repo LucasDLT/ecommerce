@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   justify-content: center;
   margin: 0.5em;
   padding: 0.5rem;
-  border: black 1px solid;
+  //border: black 1px solid;
 `;
 
 export const Title = styled.h1`

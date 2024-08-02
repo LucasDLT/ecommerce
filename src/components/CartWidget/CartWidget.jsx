@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 export const ItemContainer = styled.img`
   max-width: 1.5rem;
+  cursor: pointer;
 `
 export const CartContainer = styled.div`
   display: flex;
@@ -11,6 +12,7 @@ export const CartContainer = styled.div`
   align-items: start;
   justify-content: end;
   gap: 0.5rem;
+  
 
 `
 

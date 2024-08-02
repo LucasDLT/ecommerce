@@ -6,28 +6,64 @@ import water from "../../assets/element-icon/water.png";
 import { useState } from "react";
 import styled from "styled-components";
 import { ItemContainer } from "../CartWidget/CartWidget";
+
+
 export const NavContainer = styled.nav`
-  border: 1px solid black;
   font-family: "Dashley", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 1.9px;
   margin: 0.5rem;
   padding: 0.5rem;
+  
 `;
 export const NavList = styled.ul`
-  border: solid black 1px;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: start;
-  position: relative;
+  position: relative; 
+  border-radius:0.3rem;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  
   li {
     cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    
+
+    &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 1px;
+    left: 0;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out, background-color 0.5 ease-in-out;
   }
+  &:hover::after{
+    transform: scaleX(1);
+    transform-origin:bottom left;
+    background-color: #000000;
+    transition: transform 0.5s ease-in ;
+  }
+  &:not(:hover)::after{
+    transform:scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  }
+
 `;
 export const CategoryList = styled.ul`
   display: flex;
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   position: absolute;
   top: 100%;
   left: 0;
@@ -40,18 +76,26 @@ export const CategoryList = styled.ul`
   transition: max-height 0.7s ease-in-out;
 `;
 
-export const CategoryItem = styled.li`
+export const CategoryItem = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
-  border: 1px solid black;
   padding: 1rem;
   cursor: pointer;
+  font-family: "Dashley", sans-serif;
+  border: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  border-radius: 0 0 0.4rem 0.4rem;
+  box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.5);
+  &:hover{
+    box-shadow: 1px 1px 5px 1px rgba(90, 85, 85, 0.5);
+
+  }
 `;
 
-export const NavItem = styled.li``;
 export default function Navbar({ totalItem }) {
   const [openCategory, setOpenCategory] = useState(false);
 
@@ -64,7 +108,7 @@ export default function Navbar({ totalItem }) {
       <CartWidget totalItem="10" />
         <NavList>
           <li>Inicio</li>
-          <li onClick={handleCategory}>categorias</li>
+          <li onClick={handleCategory}>Lineas</li>
           <CategoryList openCategory={openCategory}>
             <CategoryItem>
               aire
@@ -85,7 +129,7 @@ export default function Navbar({ totalItem }) {
           </CategoryList>
 
           <li>Nuestra Historia</li>
-          <li>Ofertas</li>
+          <li>Destacados</li>
           <li>Contacto</li>
           <li>Ayuda</li>
         </NavList>

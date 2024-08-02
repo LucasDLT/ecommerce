@@ -3,7 +3,7 @@ import Navbar from "./components/NavbarComponent/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Header from "./components/Header/Header";
 
-function App({greeting}) {
+function App() {
   return (
     <>
       <Header />

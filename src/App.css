@@ -1,10 +1,7 @@
-
-body{
-          background-image: url("../src/assets/home-option-4.jpg");
-          background-size: cover; 
-          background-position: initial; 
-          background-repeat: no-repeat; 
-          background-attachment: scroll;
+body {
+  background-image: url("../src/assets/home-option-4.jpg");
+  background-size: cover;
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
-
-

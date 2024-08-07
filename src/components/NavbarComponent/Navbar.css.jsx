@@ -4,8 +4,8 @@ export const NavContainer = styled.nav`
   font-family: "Dashley", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 1.9px;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 0.1rem;
+  padding: 0.3rem;
 `;
 export const NavList = styled.ul`
   padding: 0.5rem;
@@ -13,7 +13,7 @@ export const NavList = styled.ul`
   justify-content: space-between;
   align-items: start;
   position: relative;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
 
   li {

@@ -44,10 +44,9 @@ export default function Navbar({ totalItem }) {
             </CategoryItem>
           </CategoryList>
 
-          <li>Nuestra Historia</li>
           <li>Destacados</li>
-          <li>Contacto</li>
-          <li>Ayuda</li>
+          <li>Nuestra Historia</li>
+
         </NavList>
       </NavContainer>
     </>

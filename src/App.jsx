@@ -15,8 +15,8 @@ function App() {
       <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu"/>
       <Footer/>*/}
 
-      <ItemCount />
-      <ComponentButton text="prueba" />
+      <ItemCount/>
+      <ComponentButton text="primer prueba de prop condicional en button" />
     </>
   );
 }

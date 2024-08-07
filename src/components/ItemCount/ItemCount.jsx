@@ -1,16 +1,26 @@
 import styled from "styled-components";
 import ComponentButton from "../ComponentButton/ComponentButton";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function ItemCount() {
   const [count, setCount] = useState(0);
+  const [stock, setStock] = useState(5);
 
+  const listaDePractica = {};
   const handlerSubtract = () => {
-    setCount((num) => num - 1);
+    if (count >= 1) {
+      setCount((num) => num - 1);
+      setStock((num) => num + 1);
+
+    }
   };
 
   const handlerAdd = () => {
-    setCount((num) => num + 1);
+    if (count < stock) {
+      setCount((num) => num + 1);
+      setStock((num) => num - 1);
+
+    }
   };
 
   return (
@@ -18,6 +28,7 @@ export default function ItemCount() {
       <ComponentButton onClick={handlerAdd} text="+" />
       <div>{count}</div>
       <ComponentButton onClick={handlerSubtract} text="-" />
+      <div>{stock}</div>
     </CounterContainer>
   );
 }

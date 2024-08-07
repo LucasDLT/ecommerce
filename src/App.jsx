@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import TerminosYCondiciones from "./components/TerminosCondiciones/Terminos&Condiciones";
 import ItemCount from "./components/ItemCount/ItemCount";
+import ComponentButton from "./components/ComponentButton/ComponentButton";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Footer/>*/}
 
       <ItemCount />
-      
+      <ComponentButton text="prueba" />
     </>
   );
 }

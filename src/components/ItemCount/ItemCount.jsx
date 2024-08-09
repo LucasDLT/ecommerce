@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ComponentButton from "../ComponentButton/ComponentButton";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function ItemCount() {
   const [count, setCount] = useState(0);
@@ -36,6 +37,19 @@ export default function ItemCount() {
     }
   });
 
+  const promesaSonner = () => new Promise((resolve) =>setTimeout(()=> resolve (listaDePractica), 2000));
+  
+  toast.promise(promesaSonner,{
+    loading:'Loading...',
+    success:(data)=>{
+      return `${data[2].NAME} toast has added`
+    },
+    error:'Error'
+  })
+
+  
+
+
   promesaDePrueba.then(
     (resultado) => {
       console.log(resultado);
@@ -59,10 +73,10 @@ export default function ItemCount() {
       setCount((numCount) => numCount + 1);
       setStock((numStock) => numStock - 1);
     } else {
-      alert("no puedes agregar mas items al carrito");
+      toast.warning("no puedes agregar mas items al carrito");
     }
     if (stock === 2) {
-      alert("poco stock");
+      toast.info("poco stock");
     }
   };
 

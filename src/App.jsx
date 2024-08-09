@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import TerminosYCondiciones from "./components/TerminosCondiciones/Terminos&Condiciones";
 import ItemCount from "./components/ItemCount/ItemCount";
 import ComponentButton from "./components/ComponentButton/ComponentButton";
-
+import {Toaster} from 'sonner'
 function App() {
   return (
     <>
@@ -14,9 +14,11 @@ function App() {
       <Navbar />
       <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu"/>
       <Footer/>*/}
-
       <ItemCount/>
       <ComponentButton text="primer prueba de prop condicional en button" />
+      <Toaster position="bottom-center" expand={false} />
+      {/*EXPAND para que las notificaciones se apilen
+         POSITION para la alineacion horizontal*/}
     </>
   );
 }

@@ -26,40 +26,6 @@ export default function ItemCount() {
     { ID: 9, STOCK: 7, NAME: "Mate clásico", PRICE: 15.99 },
     { ID: 10, STOCK: 9, NAME: "Mate moderno", PRICE: 19.99 },
   ];
-  const promesaDePrueba = new Promise((resolve, reject) => {
-    if (resolve) {
-      setTimeout(() => {
-        console.log(listaDePractica[2].NAME);
-      }, 3000);
-    }
-    if (reject) {
-      console.log("promesa rechazada");
-    }
-  });
-
-  const promesaSonner = () => new Promise((resolve) =>setTimeout(()=> resolve (listaDePractica), 2000));
-  
-  toast.promise(promesaSonner,{
-    loading:'Loading...',
-    success:(data)=>{
-      return `${data[2].NAME} toast has added`
-    },
-    error:'Error'
-  })
-
-  
-
-
-  promesaDePrueba.then(
-    (resultado) => {
-      console.log(resultado);
-    },
-    (err) => {
-      console.log("Error:" + err);
-    }).catch(err=>{
-      console.log("ejemplo del material");
-      
-    })
 
   const handlerSubtract = () => {
     if (count > 0) {
@@ -73,10 +39,10 @@ export default function ItemCount() {
       setCount((numCount) => numCount + 1);
       setStock((numStock) => numStock - 1);
     } else {
-      toast.warning("no puedes agregar mas items al carrito");
+      toast(<CustomToast>no puedes agregar más items al carrito</CustomToast>);
     }
     if (stock === 2) {
-      toast.info("poco stock");
+      toast(<CustomToast>aviso de poco stock</CustomToast>);
     }
   };
 
@@ -136,4 +102,16 @@ export const StockContainer = styled.div`
   align-items: center;
   display: flex;
   border-radius: 0.3rem;
+`;
+
+export const CustomToast = styled.div`
+  color: black;
+  font-weight: bolder;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Dashley", sans-serif;
+  letter-spacing:0.1rem;
+  border: 1px solid black;
+  background-color: #2d804d93;
 `;

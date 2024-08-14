@@ -16,7 +16,15 @@ function App() {
       <Footer/>*/}
       <ItemCount/>
       <ComponentButton text="primer prueba de prop condicional en button" />
-      <Toaster position="bottom-center" expand={false} />
+      <Toaster position="bottom-center" 
+      expand={false} 
+      duration={1500}
+      toastOptions={{
+          style: {
+            backgroundColor: 'transparent', 
+            boxShadow: 'none', 
+          },
+        }}/>
       {/*EXPAND para que las notificaciones se apilen
          POSITION para la alineacion horizontal*/}
     </>

@@ -6,25 +6,29 @@ import Footer from "./components/Footer/Footer";
 import TerminosYCondiciones from "./components/TerminosCondiciones/Terminos&Condiciones";
 import ItemCount from "./components/ItemCount/ItemCount";
 import ComponentButton from "./components/ComponentButton/ComponentButton";
-import {Toaster} from 'sonner'
+import { Toaster } from "sonner";
+import ItemDetailContainer from "./components/ItemDetailConteiner/ItemDetailContainer";
 function App() {
   return (
     <>
-     {/* <Header />
+      <Header />
       <Navbar />
-      <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu"/>
-      <Footer/>*/}
-      <ItemCount/>
+      <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu" />
+      <Footer />
+      <ItemDetailContainer />
+      <ItemCount />
       <ComponentButton text="primer prueba de prop condicional en button" />
-      <Toaster position="bottom-center" 
-      expand={false} 
-      duration={1500}
-      toastOptions={{
+      <Toaster
+        position="bottom-center"
+        expand={false}
+        duration={1500}
+        toastOptions={{
           style: {
-            backgroundColor: 'transparent', 
-            boxShadow: 'none', 
+            backgroundColor: "transparent",
+            boxShadow: "none",
           },
-        }}/>
+        }}
+      />
       {/*EXPAND para que las notificaciones se apilen
          POSITION para la alineacion horizontal*/}
     </>

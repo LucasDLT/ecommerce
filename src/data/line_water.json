@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Taza de Agua",
+    "description": "Taza de cerámica grabada con detalle de agua, canalizando las energías fluidas y tranquilas.",
+    "stock": 10,
+    "line": "water",
+    "price": 12.99,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Mate de Agua",
+    "description": "Mate de cerámica grabada con detalle de agua, evocando la serenidad y la paz de los antiguos ríos.",
+    "stock": 10,
+    "line": "water",
+    "price": 14.5,
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Fuente de Agua",
+    "description": "Fuente de cerámica grabada con detalle de agua, inspirada en los rituales del agua sagrada.",
+    "stock": 10,
+    "line": "water",
+    "price": 18.75,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Pieza Central de Agua",
+    "description": "Pieza central de mesa, en cerámica grabada con detalle de agua, infundida con la calma de las profundidades.",
+    "stock": 10,
+    "line": "water",
+    "price": 13.99,
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Cazuela de Agua",
+    "description": "Cazuela de cerámica grabada con detalle de agua, reflejando la pureza y la fluidez que reside en cada ser.",
+    "stock": 10,
+    "line": "water",
+    "price": 15.2,
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Taza Mug de Agua",
+    "description": "Taza Mug en cerámica grabada con detalle de agua, guardiana de las antiguas tradiciones acuáticas.",
+    "stock": 10,
+    "line": "water",
+    "price": 16.99,
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Pipa de Agua",
+    "description": "Pipa de cerámica grabada con detalle de agua, destinada a aquellos que buscan la calma en su espíritu.",
+    "stock": 10,
+    "line": "water",
+    "price": 17.5,
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Sahumador de Agua",
+    "description": "Sahumador de cerámica grabada con detalle de agua, símbolo de la vida y la renovación constante.",
+    "stock": 10,
+    "line": "water",
+    "price": 11.99,
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Hornillo de Agua",
+    "description": "Hornillo de cerámica grabada con detalle de agua, inspirado en las corrientes que purifican y transforman.",
+    "stock": 10,
+    "line": "water",
+    "price": 19.8,
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Platos de Agua",
+    "description": "Platos de cerámica grabada con detalle de agua, canalizando la serenidad y la vitalidad de cada hogar.",
+    "stock": 10,
+    "line": "water",
+    "price": 10.99,
+    "image": ""
+  }
+]

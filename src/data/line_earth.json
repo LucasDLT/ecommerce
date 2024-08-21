@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Taza de Tierra",
+    "description": "Taza de cerámica grabada con detalle de tierra, conectando con la solidez y la fertilidad del suelo.",
+    "stock": 10,
+    "line": "earth",
+    "price": 12.99,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Mate de Tierra",
+    "description": "Mate de cerámica grabada con detalle de tierra, evocando la fuerza y la estabilidad de las montañas.",
+    "stock": 10,
+    "line": "earth",
+    "price": 14.5,
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Fuente de Tierra",
+    "description": "Fuente de cerámica grabada con detalle de tierra, inspirada en los rituales de la tierra sagrada.",
+    "stock": 10,
+    "line": "earth",
+    "price": 18.75,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Pieza Central de Tierra",
+    "description": "Pieza central de mesa, en cerámica grabada con detalle de tierra, infundida con la energía de la naturaleza.",
+    "stock": 10,
+    "line": "earth",
+    "price": 13.99,
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Cazuela de Tierra",
+    "description": "Cazuela de cerámica grabada con detalle de tierra, reflejando la riqueza y la estabilidad que reside en cada ser.",
+    "stock": 10,
+    "line": "earth",
+    "price": 15.2,
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Taza Mug de Tierra",
+    "description": "Taza Mug en cerámica grabada con detalle de tierra, guardiana de las antiguas tradiciones terrestres.",
+    "stock": 10,
+    "line": "earth",
+    "price": 16.99,
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Pipa de Tierra",
+    "description": "Pipa de cerámica grabada con detalle de tierra, destinada a aquellos que buscan la conexión con la madre naturaleza.",
+    "stock": 10,
+    "line": "earth",
+    "price": 17.5,
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Sahumador de Tierra",
+    "description": "Sahumador de cerámica grabada con detalle de tierra, símbolo de la vida y el ciclo de renovación.",
+    "stock": 10,
+    "line": "earth",
+    "price": 11.99,
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Hornillo de Tierra",
+    "description": "Hornillo de cerámica grabada con detalle de tierra, inspirado en la firmeza que sustenta y transforma.",
+    "stock": 10,
+    "line": "earth",
+    "price": 19.8,
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Platos de Tierra",
+    "description": "Platos de cerámica grabada con detalle de tierra, canalizando la estabilidad y el equilibrio en cada hogar.",
+    "stock": 10,
+    "line": "earth",
+    "price": 10.99,
+    "image": ""
+  }
+]

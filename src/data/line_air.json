@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Taza de Aire",
+    "description": "Taza de cerámica grabada con detalle de aire, capturando la ligereza y la libertad del viento.",
+    "stock": 10,
+    "line": "air",
+    "price": 12.99,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Mate de Aire",
+    "description": "Mate de cerámica grabada con detalle de aire, evocando la frescura y la vitalidad de las brisas.",
+    "stock": 10,
+    "line": "air",
+    "price": 14.5,
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Fuente de Aire",
+    "description": "Fuente de cerámica grabada con detalle de aire, inspirada en los rituales del viento sagrado.",
+    "stock": 10,
+    "line": "air",
+    "price": 18.75,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Pieza Central de Aire",
+    "description": "Pieza central de mesa, en cerámica grabada con detalle de aire, infundida con la fluidez del aire.",
+    "stock": 10,
+    "line": "air",
+    "price": 13.99,
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Cazuela de Aire",
+    "description": "Cazuela de cerámica grabada con detalle de aire, reflejando la ligereza y la energía que reside en cada ser.",
+    "stock": 10,
+    "line": "air",
+    "price": 15.2,
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Taza Mug de Aire",
+    "description": "Taza Mug en cerámica grabada con detalle de aire, guardiana de las antiguas tradiciones aéreas.",
+    "stock": 10,
+    "line": "air",
+    "price": 16.99,
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Pipa de Aire",
+    "description": "Pipa de cerámica grabada con detalle de aire, destinada a aquellos que buscan la libertad en su espíritu.",
+    "stock": 10,
+    "line": "air",
+    "price": 17.5,
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Sahumador de Aire",
+    "description": "Sahumador de cerámica grabada con detalle de aire, símbolo de la vida y la renovación constante.",
+    "stock": 10,
+    "line": "air",
+    "price": 11.99,
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Hornillo de Aire",
+    "description": "Hornillo de cerámica grabada con detalle de aire, inspirado en las corrientes que purifican y transforman.",
+    "stock": 10,
+    "line": "air",
+    "price": 19.8,
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Platos de Aire",
+    "description": "Platos de cerámica grabada con detalle de aire, canalizando la ligereza y la vitalidad en cada hogar.",
+    "stock": 10,
+    "line": "air",
+    "price": 10.99,
+    "image": ""
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Taza de Fuego",
+    "description": "Taza de cerámica grabada con detalle de fuego, canalizando las energías ancestrales.",
+    "stock": 10,
+    "line": "fire",
+    "price": 12.99,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Mate de Fuego",
+    "description": "Mate de cerámica grabada con detalle de fuego, evocando la fuerza y la pasión de los antiguos guerreros.",
+    "stock": 10,
+    "line": "fire",
+    "price": 14.5,
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Fuente de Fuego",
+    "description": "Fuente de cerámica grabada con detalle de fuego, inspirada en los rituales del fuego sagrado.",
+    "stock": 10,
+    "line": "fire",
+    "price": 18.75,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Pieza Central de Fuego",
+    "description": "Pieza central de mesa, en cerámica grabada con detalle de fuego, infundida con las llamas del poder interior.",
+    "stock": 10,
+    "line": "fire",
+    "price": 13.99,
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Cazuela de Fuego",
+    "description": "Cazuela de cerámica grabada con detalle de fuego, reflejando la chispa divina que reside en cada ser.",
+    "stock": 10,
+    "line": "fire",
+    "price": 15.2,
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Taza Mug de Fuego",
+    "description": "Taza Mug en cerámica grabada con detalle de fuego, guardiana de las antiguas tradiciones.",
+    "stock": 10,
+    "line": "fire",
+    "price": 16.99,
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Pipa de Fuego",
+    "description": "Pipa de cerámica grabada con detalle de fuego, destinada a aquellos que buscan encender su espíritu.",
+    "stock": 10,
+    "line": "fire",
+    "price": 17.5,
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Sahumador de Fuego",
+    "description": "Sahumador de cerámica grabada con detalle de fuego, símbolo de la eternidad y la renovación.",
+    "stock": 10,
+    "line": "fire",
+    "price": 11.99,
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Hornillo de Fuego",
+    "description": "Hornillo de cerámica grabada con detalle de fuego, inspirado en las llamas que purifican y transforman.",
+    "stock": 10,
+    "line": "fire",
+    "price": 19.8,
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Platos de Fuego",
+    "description": "Platos de cerámica grabada con detalle de fuego, canalizando la energía vital de cada hogar.",
+    "stock": 10,
+    "line": "fire",
+    "price": 10.99,
+    "image": ""
+  }
+]

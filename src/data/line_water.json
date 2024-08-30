@@ -19,8 +19,8 @@
   },
   {
     "id": 3,
-    "name": "Fuente de Agua",
-    "description": "Fuente de cerámica grabada con detalle de agua, inspirada en los rituales del agua sagrada.",
+    "name": "Bowl de Agua",
+    "description": "Bowl de cerámica grabada con detalle de agua, inspirada en los rituales del agua sagrada.",
     "stock": 10,
     "line": "water",
     "price": 18.75,

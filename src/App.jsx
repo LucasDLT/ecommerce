@@ -1,4 +1,7 @@
 import "./App.css";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+
 import Navbar from "./components/NavbarComponent/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Header from "./components/Header/Header";
@@ -11,13 +14,12 @@ import ItemDetailContainer from "./components/ItemDetailConteiner/ItemDetailCont
 function App() {
   return (
     <>
+      <BrowserRouter>    
       <Header />
       <Navbar />
       <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu" />
       <Footer />
       <ItemDetailContainer />
-      <ItemCount />
-      <ComponentButton text="primer prueba de prop condicional en button" />
       <Toaster
         position="bottom-center"
         expand={false}
@@ -29,6 +31,8 @@ function App() {
           },
         }}
       />
+            </BrowserRouter>    
+
       {/*EXPAND para que las notificaciones se apilen
          POSITION para la alineacion horizontal*/}
     </>

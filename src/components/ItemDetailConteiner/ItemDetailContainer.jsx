@@ -15,11 +15,12 @@ export default function ItemDetailContainer() {
     <>
       <h1>ItemDetailContainer</h1>
       <section>
-        {items.map((product) => (
-          <ItemDetail item={product} />
+        {items.map((product, id) => (
+          <ItemDetail key={id} item={product} />
           
         ))}
       </section>
     </>
   );
 }
+

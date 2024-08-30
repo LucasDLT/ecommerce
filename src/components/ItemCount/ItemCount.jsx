@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import ComponentButton from "../ComponentButton/ComponentButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-export default function ItemCount() {
+export default function ItemCount({itemStock}) {
+
   const [count, setCount] = useState(0);
-  const [stock, setStock] = useState(5);
-  //stock hardcodeado para practicar como en clase
-  const maxStock = 5;
+
+  const [stock, setStock] = useState(itemStock);
+
   //objeto con colores para practicar
   const colorButton = {
     add: "green",
     subs: "red",
   };
- 
-
+  
   const handlerSubtract = () => {
     if (count > 0) {
       setCount((numCount) => numCount - 1);
@@ -23,7 +23,7 @@ export default function ItemCount() {
   };
 
   const handlerAdd = () => {
-    if (count < maxStock) {
+    if (count < itemStock) {
       setCount((numCount) => numCount + 1);
       setStock((numStock) => numStock - 1);
     } else {
@@ -49,7 +49,7 @@ export default function ItemCount() {
           text="-"
         />
       </CounterContainer>
-      <StockContainer>{stock}</StockContainer>
+      <StockContainer >{stock}</StockContainer>
     </>
   );
 }

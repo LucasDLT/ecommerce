@@ -28,8 +28,8 @@
   },
   {
     "id": 4,
-    "name": "Pieza Central de Fuego",
-    "description": "Pieza central de mesa, en cerámica grabada con detalle de fuego, infundida con las llamas del poder interior.",
+    "name": "Cenicero de Fuego",
+    "description": "Cenicero central de mesa, en cerámica grabada con detalle de fuego, infundida con las llamas del poder interior.",
     "stock": 10,
     "line": "fire",
     "price": 13.99,
@@ -64,8 +64,8 @@
   },
   {
     "id": 8,
-    "name": "Sahumador de Fuego",
-    "description": "Sahumador de cerámica grabada con detalle de fuego, símbolo de la eternidad y la renovación.",
+    "name": "flor de Fuego",
+    "description": "flor de cerámica grabada con detalle de fuego, símbolo de la eternidad y la renovación.",
     "stock": 10,
     "line": "fire",
     "price": 11.99,

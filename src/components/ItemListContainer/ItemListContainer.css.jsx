@@ -11,7 +11,7 @@ export const ListContainer = styled.section`
   align-items: center;
   background-size: cover;
   background-position: center;
-`;
+`; 
 export const Greeting = styled(Title)`
   margin-top: 0.5rem;
   font-size: 3rem;

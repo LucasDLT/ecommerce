@@ -4,7 +4,9 @@ import fire from "../../assets/element-icon/fire.png";
 import air from "../../assets/element-icon/air.png";
 import water from "../../assets/element-icon/water.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ItemContainer } from "../CartWidget/Cart.css";
+import ComponentButton from "../ComponentButton/ComponentButton";
 import {
   NavContainer,
   NavList,
@@ -23,8 +25,9 @@ export default function Navbar({ totalItem }) {
       <NavContainer>
         <CartWidget totalItem="10" />
         <NavList>
-          <li>Inicio</li>
-          <li onClick={handleCategory}>Lineas</li>
+          <ComponentButton><Link to={'/'} >Inicio</Link></ComponentButton>
+          <ComponentButton><Link to={'/productos'} >Productos</Link></ComponentButton>
+          <ComponentButton onClick={handleCategory}>Lineas</ComponentButton>
           <CategoryList openCategory={openCategory}>
             <CategoryItem>
               aire
@@ -44,8 +47,9 @@ export default function Navbar({ totalItem }) {
             </CategoryItem>
           </CategoryList>
 
-          <li>Destacados</li>
-          <li>Nuestra Historia</li>
+          <ComponentButton>Categorias</ComponentButton>
+          <ComponentButton><Link to={'/TerminosYCondiciones'}>Terminos y Condiciones</Link></ComponentButton>
+
 
         </NavList>
       </NavContainer>

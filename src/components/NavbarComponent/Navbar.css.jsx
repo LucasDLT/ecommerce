@@ -6,7 +6,6 @@ export const NavContainer = styled.nav`
   letter-spacing: 1.9px;
   margin: 0.1rem;
   padding: 0.3rem;
-  
 `;
 export const NavList = styled.ul`
   padding: 0.5rem;
@@ -18,13 +17,18 @@ export const NavList = styled.ul`
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   background-color: #9adbb744;
 
-  li {
+  button {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 0.2rem;
     position: relative;
     display: inline-block;
     text-decoration: none;
+    font-family: "Dashley", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1.9px;
+    margin: 0.1rem;
+    padding: 0.3rem;
 
     &::after {
       content: "";

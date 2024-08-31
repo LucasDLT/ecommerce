@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {openList} from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import styled from "styled-components";
 
 export default function ItemDetailContainer() {
   const [items, setItems] = useState([]);
@@ -14,13 +15,24 @@ export default function ItemDetailContainer() {
   return (
     <>
       <h1>ItemDetailContainer</h1>
-      <section>
+      <ProductSection>
         {items.map((product, id) => (
           <ItemDetail key={id} item={product} />
           
         ))}
-      </section>
+      </ProductSection>
     </>
   );
 }
 
+const ProductSection=styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  max-width: 70vw;
+  max-height: 50vh;
+`

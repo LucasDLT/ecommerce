@@ -5,9 +5,11 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { Toaster } from "sonner";
-import ItemDetailContainer from "./components/ItemDetailConteiner/ItemDetailContainer";
+import ItemList from "./components/ItemList/ItemList";
 import TerminosYCondiciones from "./components/TerminosCondiciones/Terminos&Condiciones";
-import { CardComponent } from "./components/CardComponent/CardComponent";
+import { ItemDetail } from "./components/ItemDetail/ItemDetail";
+import CartComponent from "./components/Cart/CartComponent";
+import CategoryListContainer from "./components/CategoryListContainer/CategoryListContainer";
 
 function App() {
   return (
@@ -23,13 +25,15 @@ function App() {
               <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu" />
             }
           />
-          <Route exact path="/productos" element={<ItemDetailContainer />} />
-          <Route exact path="/productos/:prodId" element={<CardComponent/>} />
+          <Route exact path="/item" element={<ItemList />} />
+          <Route exact path="/item/:id" element={<ItemDetail/>} />
+          <Route exact path="/category/:categoryId" element={<CategoryListContainer />} />
           <Route
             exact
             path="/TerminosYCondiciones"
             element={<TerminosYCondiciones />}
           />
+          <Route exact path="/cart" element={<CartComponent/>} />
         </Routes>
         <Footer />
         <Toaster

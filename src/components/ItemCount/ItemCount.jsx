@@ -12,10 +12,7 @@ export default function ItemCount({ itemStock }) {
   const [count, setCount] = useState(0);
   const [stock, setStock] = useState(initialStock);
 
-  const colorButton = {
-    add: "green",
-    subs: "red",
-  };
+
   const handlerSubtract = () => {
     if (count > 0) {
       setCount((numCount) => numCount - 1);
@@ -40,15 +37,13 @@ export default function ItemCount({ itemStock }) {
     <>
       <CounterContainer>
         <ComponentButton
-          backgroundColor={colorButton.add}
           onClick={handlerAdd}
         >+</ComponentButton>
         <div>{count}</div>
         <ComponentButton
-          backgroundColor={colorButton.subs}
           onClick={handlerSubtract}
         >-</ComponentButton>
-        <StockComponent itemStock={stock}>stock: {stock}</StockComponent>
+        <StockComponent itemStock={stock}>unidades {stock}</StockComponent>
       </CounterContainer>
     </>
   );
@@ -61,20 +56,19 @@ export const CounterContainer = styled.div`
   padding: 0.2rem;
   margin: 0.3rem;
   border-radius: 0.5rem;
-  border: 1px solid black;
-  max-width: 19rem;
+  max-width: auto;
   background-color: #54a26959;
   input {
     max-width: 1rem;
   }
   button {
     max-width: 1.3rem;
-    border: black 1px solid;
     cursor: pointer;
     padding: 0.4rem;
     margin: 0.3rem;
     border-radius: 0.2rem;
-    background-color: transparent;
+    border: solid 1px grey;
+    background-color: #e0b4b456;
     &:hover {
       backdrop-filter: blur(3px);
       transition: backdrop-filter 0.3s ease-in-out;
@@ -90,6 +84,5 @@ export const CustomToast = styled.div`
   text-align: center;
   font-family: "Dashley", sans-serif;
   letter-spacing: 0.1rem;
-  border: 1px solid black;
   background-color: #2d804d93;
 `;

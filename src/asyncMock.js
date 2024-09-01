@@ -1,3 +1,8 @@
+import line_air from './data/line_air.json'
+import line_fire from './data/line_fire.json'
+import line_earth from './data/line_earth.json'
+import line_water from './data/line_water.json'
+
 //listado de practica para acceder a los objetos
 //eventualmente queda como un array vacio que se completa con una funcion que le da valor al retornarlo con un json parseado
 let listaDePractica = [
@@ -116,6 +121,17 @@ export const getLineJson = (line) => {
     return null;
   }
 };
+//funcion en proceso es para los Json
+export const combineProductList =(totalLine)=>{
+  let unificatedList =[]
+  totalLine.forEach(totalLine => {
+    const productList = getLineJson(totalLine)
+    if (productList) {
+      unificatedList = unificatedList.concat(productList)
+    }
+  });
+  return unificatedList
+}
 
 //funcion que simula el retrado en la peticion y retorna un listado
 export const openList = () =>
@@ -136,6 +152,12 @@ export const productById = (id) => {
   const result = listaDePractica.find((item) => item.id === numericId);
 
   return result || null;
+};
+//funcion para las CATEGORIAS 
+export const productsByCategory = (category) => {
+  return listaDePractica.filter(
+    (item) => item.category.toLocaleLowerCase() === category.toLocaleLowerCase()
+  );
 };
 
 //funcion de filtrado por nombres

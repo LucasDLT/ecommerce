@@ -6,9 +6,12 @@ export const ItemContainer = styled.img`
 `;
 export const CartContainer = styled.div`
   display: flex;
+  
   margin: 0.5rem;
   padding: 0.3rem;
-  align-items: start;
-  justify-content: end;
+  align-items: center;
+  justify-content:right;
   gap: 0.5rem;
+  width: 4em;
+  
 `;

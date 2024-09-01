@@ -65,7 +65,7 @@ export const CategoryList = styled.ul`
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  max-height: ${({ openCategory }) => (openCategory ? "200px" : "0")};
+  max-height: ${({ openCategory, openLine }) => (openCategory || openLine ? "200px" : "0")};
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
 `;

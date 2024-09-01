@@ -4,7 +4,7 @@ import fire from "../../assets/element-icon/fire.png";
 import air from "../../assets/element-icon/air.png";
 import water from "../../assets/element-icon/water.png";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import { ItemContainer } from "../CartWidget/Cart.css";
 import ComponentButton from "../ComponentButton/ComponentButton";
@@ -16,15 +16,14 @@ import {
 } from "./Navbar.css";
 import { productsByCategory } from "../../asyncMock";
 
-
 export default function Navbar() {
   const [openCategory, setOpenCategory] = useState(false);
-  const [openLine, setOpenLine] = useState(false)
+  const [openLine, setOpenLine] = useState(false);
   const navigate = useNavigate();
   function handleLine() {
     if (openCategory) {
       setOpenCategory(false);
-      setTimeout(() => setOpenLine(!openLine), 400); 
+      setTimeout(() => setOpenLine(!openLine), 400);
     } else {
       setOpenLine(!openLine);
     }
@@ -33,7 +32,7 @@ export default function Navbar() {
   function handleCategory() {
     if (openLine) {
       setOpenLine(false);
-      setTimeout(() => setOpenCategory(!openCategory), 300); 
+      setTimeout(() => setOpenCategory(!openCategory), 300);
     } else {
       setOpenCategory(!openCategory);
     }
@@ -78,7 +77,7 @@ export default function Navbar() {
 
           <ComponentButton onClick={handleLine}>Categorias</ComponentButton>
           <CategoryList openLine={openLine}>
-          <CategoryItem onClick={() => handleCategoryClick("tazas")}>
+            <CategoryItem onClick={() => handleCategoryClick("tazas")}>
               tazas
             </CategoryItem>
             <CategoryItem onClick={() => handleCategoryClick("recipientes")}>
@@ -94,7 +93,6 @@ export default function Navbar() {
               sahumadores
             </CategoryItem>
           </CategoryList>
-
 
           <ComponentButton>
             <NavLink to="/TerminosYCondiciones" activeClassName="active">

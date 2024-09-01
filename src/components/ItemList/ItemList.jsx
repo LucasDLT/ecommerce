@@ -25,7 +25,7 @@ export default function ItemList() {
   );
 }
 
-const ProductSection=styled.section`
+export const ProductSection=styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;

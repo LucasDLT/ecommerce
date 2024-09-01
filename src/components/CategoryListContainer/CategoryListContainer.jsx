@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { productsByCategory } from "../../asyncMock";
+import CardItem from "../CardItem/CardItem";
+import { ProductSection } from "../ItemList/ItemList";
 
 const CategoryView = () => {
   const { categoryId } = useParams();
@@ -9,20 +11,16 @@ const CategoryView = () => {
   return (
     <div>
       <h1>Productos en la categoría: {categoryId}</h1>
-      <div>
+      <ProductSection>
         {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <div key={product.id}>
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
-              <p>Price: ${product.price}</p>
-              <img src={product.image} alt={product.name} />
-            </div>
+          filteredProducts.map((product, id) => (
+                    <CardItem key={id} item={product} />
+
           ))
         ) : (
           <p>No hay productos en esta categoría.</p>
         )}
-      </div>
+      </ProductSection>
     </div>
   );
 };

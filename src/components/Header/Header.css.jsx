@@ -5,15 +5,16 @@ export const HeaderContainer = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0.5em;
   padding: 0.5rem;
+  height: 52vh;
+  margin: 2rem;
   //border: black 1px solid;
 `;
 
 export const Title = styled.h1`
   font-family: "Dashley", sans-serif;
   font-style: oblique;
-  font-size: 5rem;
+  font-size: 9rem;
   letter-spacing: 5px;
   display: flex;
   align-items: center;
@@ -24,7 +25,7 @@ export const Title = styled.h1`
 `;
 export const Slogan = styled.h2`
   font-family: "Asmbuh";
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-style: oblique;
   letter-spacing: 2.3px;
   display: flex;

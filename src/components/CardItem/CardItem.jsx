@@ -20,7 +20,7 @@ const DivCard = styled.div`
   font-family: "Dashley", sans-serif;
   font-size: 1.5rem;
   background-color: #3f563d6b;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1px);
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;

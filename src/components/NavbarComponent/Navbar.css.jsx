@@ -4,18 +4,19 @@ export const NavContainer = styled.nav`
   font-family: "Dashley", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 1.9px;
-  margin: 0.1rem;
   padding: 0.3rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
 `;
 export const NavList = styled.ul`
   padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: start;
   position: relative;
-  border-radius: 0.2rem;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
-  background-color: #9adbb744;
+  //border-radius: 0.2rem;
+  //box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  //background-color: #9adbb744;
 
   button {
     cursor: pointer;
@@ -62,7 +63,7 @@ export const CategoryList = styled.ul`
   top: 100%;
   left: 0;
   right: 0;
-  gap: 2rem;
+  gap: 0.1rem;
   justify-content: center;
   align-items: center;
   max-height: ${({ openCategory, openLine }) => (openCategory || openLine ? "200px" : "0")};
@@ -80,11 +81,11 @@ export const CategoryItem = styled.button`
   cursor: pointer;
   font-family: "Dashley", sans-serif;
   border: none;
-  background-color: #9adbb744;
   font-size: 1.3rem;
   border-radius: 0 0 0.4rem 0.4rem;
-  box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.5);
-  &:hover {
-    box-shadow: 1px 1px 5px 1px rgba(90, 85, 85, 0.5);
-  }
+  background-color: transparent;
+  //box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.5);
+  //&:hover {
+    //box-shadow: 1px 1px 5px 1px rgba(90, 85, 85, 0.5);
+  //}
 `;

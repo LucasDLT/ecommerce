@@ -10,19 +10,25 @@ import TerminosYCondiciones from "./components/TerminosCondiciones/Terminos&Cond
 import { ItemDetail } from "./components/ItemDetail/ItemDetail";
 import CartComponent from "./components/Cart/CartComponent";
 import CategoryListContainer from "./components/CategoryListContainer/CategoryListContainer";
+import { useParams } from "react-router-dom";
+
+
 
 function App() {
+  const route = useParams()
+
   return (
     <>
       <BrowserRouter>
-        <Header />
         <Navbar />
         <Routes>
           <Route
             exact
             path="/"
             element={
-              <ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu" />
+              <Header />
+
+              //<ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu" />
             }
           />
           <Route exact path="/item" element={<ItemList />} />
@@ -35,6 +41,14 @@ function App() {
           />
           <Route exact path="/cart" element={<CartComponent/>} />
         </Routes>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Footer />
         <Toaster
           position="bottom-center"

@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavbarComponent/Navbar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { Toaster } from "sonner";
@@ -10,24 +9,22 @@ import TerminosYCondiciones from "./components/TerminosCondiciones/Terminos&Cond
 import { ItemDetail } from "./components/ItemDetail/ItemDetail";
 import CartComponent from "./components/Cart/CartComponent";
 import CategoryListContainer from "./components/CategoryListContainer/CategoryListContainer";
-import { useParams } from "react-router-dom";
 
 
 
-function App() {
-  const route = useParams()
-
+function App() {  
+  
   return (
     <>
       <BrowserRouter>
         <Navbar />
+    <Header />
         <Routes>
           <Route
             exact
             path="/"
             element={
-              <Header />
-
+""
               //<ItemListContainer greeting="Bienvenido, selecciona una opcion de nuestro menu" />
             }
           />
@@ -42,6 +39,7 @@ function App() {
           />
           <Route exact path="/cart" element={<CartComponent/>} />
         </Routes>
+
         <br />
         <br />
         <br />

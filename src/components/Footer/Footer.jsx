@@ -25,6 +25,7 @@ export default function () {
 export const Footer = styled.footer`
   display: flex;
   gap: 1rem;
+  margin: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   font-family: "Dashley", sans-serif;
@@ -40,4 +41,8 @@ export const Footer = styled.footer`
     black 98.9%,
     transparent
   );
+  position: absolute;
+  bottom: 0.1rem;
+  left: 10%;
+  border: solid black 1px;
 `;

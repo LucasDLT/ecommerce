@@ -6,8 +6,10 @@ export const NavContainer = styled.nav`
   letter-spacing: 1.9px;
   padding: 0.3rem;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 1.5rem;
+  justify-content: right;
+  margin-top: 3rem;
+  position: relative;
+  right: 1rem;
 `;
 export const NavList = styled.ul`
   padding: 0.5rem;

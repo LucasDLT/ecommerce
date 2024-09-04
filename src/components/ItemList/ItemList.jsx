@@ -14,7 +14,6 @@ export default function ItemList() {
 
   return (
     <>
-      <h1>ItemList</h1>
       <ProductSection>
         {items.map((product, id) => (
           <CardItem key={id} item={product} />
@@ -39,4 +38,5 @@ export const ProductSection=styled.section`
   max-width: 100vw;
   height: 30vw;
   position: relative;
+  top: 10rem;
 `

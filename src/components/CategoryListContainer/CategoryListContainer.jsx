@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Outlet } from "react-router-dom";
 import { productsByCategory } from "../../asyncMock";
 import CardItem from "../CardItem/CardItem";
 import { ProductSection } from "../ItemList/ItemList";

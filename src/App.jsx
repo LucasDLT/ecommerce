@@ -32,8 +32,9 @@ function App() {
             }
           />
           <Route exact path="/item" element={<ItemList />} />
-          <Route exact path="/item/:id" element={<ItemDetail/>} />
-          <Route exact path="/category/:categoryId" element={<CategoryListContainer />} />
+          <Route exact path="/item/detail/:id" element={<ItemDetail/>} />
+          <Route exact path="/category/:categoryId" element={<CategoryListContainer />}/>
+          <Route exact path="/category/:categoryId/detail/:id" element={<ItemDetail />} />
           <Route
             exact
             path="/TerminosYCondiciones"

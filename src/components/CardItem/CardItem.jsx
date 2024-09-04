@@ -10,7 +10,7 @@ export default function CardItem({ item }) {
         <span>{item.name} </span>
       </div>
       <ComponentButton>
-        <Link to={`/item/${item.id}`}> ver detalle</Link>
+        <Link to={`detail/${item.id}`}> ver detalle</Link>
       </ComponentButton>
     </DivCard>
   );

@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
-export const NavContainer = styled.nav`
-  font-family: "Dashley", sans-serif;
-  font-size: 1.5rem;
+export const NavContainer = styled.nav`                                               
   letter-spacing: 1.9px;
-  padding: 0.3rem;
   display: flex;
   justify-content: right;
-  margin-top: 3rem;
+  margin-top: 2rem;
   position: relative;
   right: 1rem;
 `;
@@ -27,7 +24,7 @@ export const NavList = styled.ul`
     position: relative;
     display: inline-block;
     text-decoration: none;
-    font-family: "Dashley", sans-serif;
+    font-family: 'Nightfully Haunted', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1.9px;
     margin: 0.1rem;
@@ -81,7 +78,6 @@ export const CategoryItem = styled.button`
   margin-bottom: 0.5rem;
   padding: 1rem;
   cursor: pointer;
-  font-family: "Dashley", sans-serif;
   border: none;
   font-size: 1.3rem;
   border-radius: 0 0 0.4rem 0.4rem;

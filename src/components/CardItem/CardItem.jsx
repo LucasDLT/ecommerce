@@ -19,7 +19,7 @@ export default function CardItem({ item }) {
 const DivCard = styled.div`
   font-family: "Dashley", sans-serif;
   font-size: 1.5rem;
-  background-color: #3f563d6b;
+  background-color: #3f563d50;
   backdrop-filter: blur(1px);
   border-radius: 0.3rem;
   display: flex;
@@ -27,13 +27,13 @@ const DivCard = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0.1rem;
-  max-width: 15rem;
-  max-height: 17rem;
+  max-width: 10rem;
+  max-height: 12rem;
   button {
     font-family: "Dashley", sans-serif;
     font-size: 1rem;
     letter-spacing: 1.9px;
-    background-color: #a0cb9b;
+    background-color: #a0cb9bcd;
     border-radius: 0.2rem;
     border: solid grey 0.5px;
     text-align: center;

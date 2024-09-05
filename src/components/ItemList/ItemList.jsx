@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import {openList} from "../../asyncMock";
+import { openList } from "../../asyncMock";
 import CardItem from "../CardItem/CardItem";
 import styled from "styled-components";
+import { CategorySection } from "../CategoryListContainer/CategoryListContainer";
 
 export default function ItemList() {
   const [items, setItems] = useState([]);
@@ -13,30 +14,27 @@ export default function ItemList() {
   }, []);
 
   return (
-    <>
+    <ProductContainer>
       <ProductSection>
         {items.map((product, id) => (
           <CardItem key={id} item={product} />
-          
         ))}
       </ProductSection>
-    </>
+    </ProductContainer>
   );
 }
 
-export const ProductSection=styled.section`
+export const ProductSection = styled.section`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  max-width: 100vw;
-  height: 30vw;
+  margin-top: 6rem;
+  max-width: 60vw;
+  position: absolute;
+  left: 20%;
+`;
+const ProductContainer = styled.section`
   position: relative;
-  top: 10rem;
-`
+`;

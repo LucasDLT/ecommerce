@@ -43,7 +43,6 @@ export default function Navbar() {
   return (
     <>
       <NavContainer>
-        <CartWidget totalItem="10" />
         <NavList>
           <ComponentButton>
             <NavLink to="/" activeClassName="active">
@@ -59,19 +58,19 @@ export default function Navbar() {
           <CategoryList openCategory={openCategory}>
             <CategoryItem>
               aire
-              <ItemContainer src={air} alt="icono del elemento aire" />
+              {/*<ItemContainer src={air} alt="icono del elemento aire" />*/}
             </CategoryItem>
             <CategoryItem>
               fuego
-              <ItemContainer src={fire} alt="icono del elemento fuego" />
+              {/*<ItemContainer src={fire} alt="icono del elemento fuego" />*/}
             </CategoryItem>
             <CategoryItem>
               agua
-              <ItemContainer src={water} alt="icono del elemento agua" />
+              {/*<ItemContainer src={water} alt="icono del elemento agua" />*/}
             </CategoryItem>
             <CategoryItem>
               tierra
-              <ItemContainer src={earth} alt="icono del elemento tierra" />
+              {/*<ItemContainer src={earth} alt="icono del elemento tierra" />*/}
             </CategoryItem>
           </CategoryList>
 
@@ -100,6 +99,8 @@ export default function Navbar() {
             </NavLink>
           </ComponentButton>
         </NavList>
+        <CartWidget totalItem="10" />
+
       </NavContainer>
     </>
   );

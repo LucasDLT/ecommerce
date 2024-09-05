@@ -31,10 +31,10 @@ export function ItemDetail() {
         <span>categoria: {prod.category}</span>
         <span>${prod.price}</span>
         <ItemCount itemStock={prod.stock} />
-      </ItemInfo>
       <ComponentButton>
-        <Link to={"/cart"}> finalizar compra</Link>
+        <Link to={"/cart"}>FINALIZAR COMPRA</Link>
       </ComponentButton>
+      </ItemInfo>
     </DetailItem>
   );
 }
@@ -42,16 +42,11 @@ export function ItemDetail() {
 const DetailItem = styled.div`
   display: flex;
   justify-content: center;
-  align-items: end;
-  margin: 1rem;
-  max-width: 40rem;
+  align-items: center;
+  margin-top: 5rem;
   padding: 0.1rem;
   gap: 1rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
   border-radius: 5px;
-  background-color: #9fd8c575;
-  backdrop-filter: blur(4px);
   img {
     max-height: 100%;
     max-width: 100%;
@@ -60,17 +55,27 @@ const DetailItem = styled.div`
   span {
     width: 10rem;
     margin-bottom: 0.2rem;
+    color: white;
   }
 `;
 const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.5rem;
-  margin-top: 0.5rem;
   text-align: justify;
   padding: 1rem;
-  margin: 1rem;
   gap: 0.4rem;
+  background-color: #00000083;
+  height: 25rem;
+  > button{
+    text-align: center;
+    font-size:1.4rem;
+    background-color: #36684460;
+    border-radius: 0.2rem ;
+    padding: 1rem;
+
+  }
+
 `;

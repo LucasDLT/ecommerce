@@ -6,27 +6,25 @@ export const HeaderContainer = styled.header`
       ? `
     display: flex;
     flex-direction: column;
-    padding: 0.1rem;
-    position:absolute;
-    top:1px;
-    left:0.5rem;
-    transition: top 1s ease-in-out, left 1s ease-in-out;
+    padding: 0.5rem;
+    position: absolute;
+    top: 1px;
+    left: 0.5rem;
+    transform: scale(0.5); 
+    transition: top 1s ease-in-out, left 1s ease-in-out, transform 1s ease-in-out;
   `
       : `
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    height: 52vh;
-    margin: 2rem;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%)
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 1s ease-in-out, left 1s ease-in-out, transform 1s ease-in-out;
   `}
 `;
 
-//; EN TODAS LAS RUTAS VOY A TENER QUE PONER EL TITULO, ES DECIR, PONER EN ROUTES * PARA QUE RECONOZCA QUE VA EN TODAS
 
 export const Title = styled.h1`
 
@@ -40,15 +38,29 @@ export const Title = styled.h1`
     justify-content: center;
     padding: 0.5rem;
     margin-top: 1rem;
+    a{
+      color: #172a18 !important; 
+
+    }
 
 `;
 export const Slogan = styled.h2`
   ${(props) =>
     props.$location !== "/"
       ? `
+      font-family: "Asmbuh";
+  font-size: 2.5rem;
+  font-style: oblique;
+  letter-spacing: 2.3px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;  
   opacity: 0;
+      color: #172a18 !important; 
+
   transform: translateY(-50px);
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 `
       : `
   font-family: "Asmbuh";
@@ -57,6 +69,8 @@ export const Slogan = styled.h2`
   letter-spacing: 2.3px;
   display: flex;
   text-align: center;
+      color: #172a18 !important; 
+
   align-items: center;
   justify-content: center;  
   opacity: 1;

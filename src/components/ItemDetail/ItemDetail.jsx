@@ -5,10 +5,19 @@ import { productById } from "../../asyncMock";
 import { useEffect, useState } from "react";
 import ComponentButton from "../ComponentButton/ComponentButton";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../Context/CartContext";
 
-export function ItemDetail() {
+export function ItemDetail({product}) {
   const [prod, setProd] = useState(null);
   const { id } = useParams(); //itemId sale del parametro que se ponga en /:
+
+  const [,,addItem]=useContext(cartContext)
+
+  const handleClick = ()=>{
+    addItem(product)
+    alert("agregaste un elemento")
+  }
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -32,8 +41,11 @@ export function ItemDetail() {
         <span>${prod.price}</span>
         <ItemCount itemStock={prod.stock} />
       <ComponentButton>
-        <Link to={"/cart"}>FINALIZAR COMPRA</Link>
+        <Link to={"/cart"}>Ir al carrito</Link>
       </ComponentButton>
+      <ComponentButton onClick={handleClick}>
+        Agregar al carrito
+      </ComponentButton >
       </ItemInfo>
     </DetailItem>
   );
@@ -75,7 +87,7 @@ const ItemInfo = styled.div`
     background-color: #36684460;
     border-radius: 0.2rem ;
     padding: 1rem;
-
+    cursor:pointer;
   }
 
 `;

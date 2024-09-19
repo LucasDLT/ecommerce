@@ -1,22 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { openList } from "../../asyncMock";
 import CardItem from "../CardItem/CardItem";
 import styled from "styled-components";
-import { CategorySection } from "../CategoryListContainer/CategoryListContainer";
+import { ContextApp } from "../Context/ContextApp";
 
 export default function ItemList() {
-  const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    openList()
-      .then((response) => setItems(response))
-      .catch((error) => console.log(error));
-  }, []);
+  const [products]=useContext(ContextApp)//destructuring de products utilizando el hook usecontext y dentro pasamos el contexto creado
 
   return (
     <ProductContainer>
       <ProductSection>
-        {items.map((product, id) => (
+        {products.map((product, id) => (
           <CardItem key={id} item={product} />
         ))}
       </ProductSection>

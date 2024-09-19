@@ -1,8 +1,4 @@
 import CartWidget from "../CartWidget/CartWidget";
-import earth from "../../assets/element-icon/earth.png";
-import fire from "../../assets/element-icon/fire.png";
-import air from "../../assets/element-icon/air.png";
-import water from "../../assets/element-icon/water.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";

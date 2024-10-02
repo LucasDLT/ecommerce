@@ -3,10 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 
 export default function Header() {
-  const location = useLocation()
-
-  console.log(location);
-  
+  const location = useLocation()  
   return (
     <>
       <HeaderContainer $location={location.pathname} >

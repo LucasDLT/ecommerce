@@ -1,23 +1,23 @@
+import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { useParams, Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
-import { useParams } from "react-router-dom";
-import { productById } from "../../asyncMock";
-import { useEffect, useState } from "react";
 import ComponentButton from "../ComponentButton/ComponentButton";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { productById } from "../../asyncMock";
 import { cartContext } from "../Context/CartContext";
 
-export function ItemDetail({product}) {
+export function ItemDetail() {
   const [prod, setProd] = useState(null);
-  const { id } = useParams(); //itemId sale del parametro que se ponga en /:
+  const { id } = useParams();
 
-  const [,,addItem]=useContext(cartContext)
+  const { addItem } = useContext(cartContext);
 
-  const handleClick = ()=>{
-    addItem(product)
-    alert("agregaste un elemento")
-  }
+  const handleClick = (quantity) => {
+    if (prod && quantity > 0) {
+      addItem(prod, quantity);  
+      alert(`Agregaste ${quantity} elementos al carrito`);
+    }
+  };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -37,15 +37,17 @@ export function ItemDetail({product}) {
       <ItemInfo>
         <span>{prod.name}</span>
         <span>{prod.description}</span>
-        <span>categoria: {prod.category}</span>
-        <span>${prod.price}</span>
-        <ItemCount itemStock={prod.stock} />
-      <ComponentButton>
-        <Link to={"/cart"}>Ir al carrito</Link>
-      </ComponentButton>
-      <ComponentButton onClick={handleClick}>
-        Agregar al carrito
-      </ComponentButton >
+        <span>Categoría: {prod.category}</span>
+        <span>Precio: ${prod.price}</span>
+        
+        <ItemCount item={prod} />
+        
+        <ComponentButton>
+          <Link to="/cart">Ir al carrito</Link>
+        </ComponentButton>
+        <ComponentButton onClick={() => handleClick(1)}> 
+          Agregar al carrito
+        </ComponentButton>
       </ItemInfo>
     </DetailItem>
   );
@@ -70,6 +72,7 @@ const DetailItem = styled.div`
     color: white;
   }
 `;
+
 const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -81,13 +84,12 @@ const ItemInfo = styled.div`
   gap: 0.4rem;
   background-color: #00000083;
   height: 25rem;
-  > button{
+  > button {
     text-align: center;
-    font-size:1.4rem;
+    font-size: 1.4rem;
     background-color: #36684460;
-    border-radius: 0.2rem ;
+    border-radius: 0.2rem;
     padding: 1rem;
-    cursor:pointer;
+    cursor: pointer;
   }
-
 `;

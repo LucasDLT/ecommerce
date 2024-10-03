@@ -10,7 +10,7 @@ export default function ItemCount({ item }) {
 
   const initialStock = Number.isFinite(Number(item.stock)) ? Number(item.stock) : 0;
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [stock, setStock] = useState(initialStock);
 
   const handlerSubtract = () => {

@@ -7,6 +7,14 @@ export function CartProvider({ children }) {
 
   
 
+   //CALCULAR TOTAL DEL CARRITO
+
+  const getTotalCart = ()=>{
+    return cart.reduce((acc, prod)=> acc + prod.price * prod.quantity, 0)
+  }
+
+  //
+
   //AGREGA UN ELEMENTO VERIFICA SU EXISTENCIA Y ACTUALIZA SU CANTIDAD DE SER NECESARIO
   const addItem = (item, quantity) => {
     const isInCart = cart.find((prod) => prod.id === item.id);
@@ -20,6 +28,8 @@ export function CartProvider({ children }) {
     } else {
       setCart([...cart, { ...item, quantity }]);
     }
+    const total = getTotalCart()
+    
   };
   //ELIMINA ELEMENTOS INDIVIDUALMENTE
   const removeItem = (id) => {
@@ -29,6 +39,8 @@ export function CartProvider({ children }) {
       const updatedCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
       setCart(updatedCart);
     }
+   const total = getTotalCart()
+
   };
   //VACIA EL CARRITO
   const clearCart = () => {
@@ -41,6 +53,8 @@ export function CartProvider({ children }) {
         ? { ...prod, quantity: prod.quantity + 1 } 
         : prod
     ));
+    const total = getTotalCart()
+
   };
 
   const decreaseQuantity = (id) => {
@@ -48,12 +62,14 @@ export function CartProvider({ children }) {
       prod.id === id 
         ? { ...prod, quantity: prod.quantity > 1 ? prod.quantity - 1 : 1 } 
         : prod
-    ));
+    ).filter((prod)=>prod.quantity > 0));//filter concatenado al metodo map, para eliminar productos con cantidad en 0 del carrito
+    const total = getTotalCart()
+
   };
 
   return (
     <cartContext.Provider
-      value={{ cart, setCart, addItem, removeItem, clearCart, increaseQuantity, decreaseQuantity }}
+      value={{ cart, setCart, addItem, removeItem, clearCart, increaseQuantity, decreaseQuantity, getTotalCart }}
     >
       {children}
     </cartContext.Provider>

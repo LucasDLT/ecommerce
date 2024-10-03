@@ -53,7 +53,7 @@ export function ItemDetail() {
   );
 }
 
-const DetailItem = styled.div`
+export const DetailItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ const DetailItem = styled.div`
   }
 `;
 
-const ItemInfo = styled.div`
+export const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

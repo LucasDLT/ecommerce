@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export default function ComponentButton({ children, onClick, backgroundColor, disabled }) {
+export default function ComponentButton({ children, onClick, backgroundColor, disabled, className }) {
   return (
     <Button
       style={backgroundColor ? {backgroundColor} : undefined}
       onClick={onClick ? onClick : undefined}
       disabled={disabled}
+      className={className}
     >
       {children}
     </Button>

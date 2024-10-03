@@ -15,7 +15,6 @@ export function ItemDetail() {
   const handleClick = (quantity) => {
     if (prod && quantity > 0) {
       addItem(prod, quantity);  
-      alert(`Agregaste ${quantity} elementos al carrito`);
     }
   };
 

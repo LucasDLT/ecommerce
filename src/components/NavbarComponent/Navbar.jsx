@@ -50,25 +50,21 @@ export default function Navbar() {
               Productos
             </NavLink>
           </ComponentButton>
-          <ComponentButton onClick={handleCategory}>Lineas</ComponentButton>
+          {/*<ComponentButton onClick={handleCategory}>Lineas</ComponentButton>
           <CategoryList openCategory={openCategory}>
             <CategoryItem>
               aire
-              {/*<ItemContainer src={air} alt="icono del elemento aire" />*/}
             </CategoryItem>
             <CategoryItem>
               fuego
-              {/*<ItemContainer src={fire} alt="icono del elemento fuego" />*/}
             </CategoryItem>
             <CategoryItem>
               agua
-              {/*<ItemContainer src={water} alt="icono del elemento agua" />*/}
             </CategoryItem>
             <CategoryItem>
               tierra
-              {/*<ItemContainer src={earth} alt="icono del elemento tierra" />*/}
             </CategoryItem>
-          </CategoryList>
+          </CategoryList>*/}
 
           <ComponentButton onClick={handleLine}>Categorias</ComponentButton>
           <CategoryList openLine={openLine}>
@@ -89,14 +85,13 @@ export default function Navbar() {
             </CategoryItem>
           </CategoryList>
 
-          <ComponentButton>
+        {/*  <ComponentButton>
             <NavLink to="/TerminosYCondiciones" activeClassName="active">
               Terminos y Condiciones
             </NavLink>
-          </ComponentButton>
+          </ComponentButton>*/}
         </NavList>
         <CartWidget totalItem="10" />
-
       </NavContainer>
     </>
   );

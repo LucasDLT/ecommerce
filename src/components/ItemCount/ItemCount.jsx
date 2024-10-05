@@ -4,7 +4,7 @@ import { cartContext } from "../Context/CartContext";
 import { useState } from "react";
 import ComponentButton from "../ComponentButton/ComponentButton";
 import StockComponent from "../StockComponent/StockComponent"
-
+import { toast } from "sonner";
 export default function ItemCount({ item }) {
   const { addItem, increaseQuantity, decreaseQuantity } = useContext(cartContext);  
 
@@ -14,7 +14,7 @@ export default function ItemCount({ item }) {
   const [stock, setStock] = useState(initialStock);
 
   const handlerSubtract = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount((numCount) => numCount - 1);
       setStock((numStock) => numStock + 1);
       decreaseQuantity(item.id); 

@@ -1,10 +1,12 @@
+import { addDoc, getFirestore, collection } from "firebase/firestore";
 import { useState, createContext } from "react";
+
 
 export const cartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
-
+  const [order, setOrder] = useState("")//recibe un id
   
 
    //CALCULAR TOTAL DEL CARRITO
@@ -62,14 +64,22 @@ export function CartProvider({ children }) {
       prod.id === id 
         ? { ...prod, quantity: prod.quantity > 1 ? prod.quantity - 1 : 1 } 
         : prod
-    ).filter((prod)=>prod.quantity > 0));//filter concatenado al metodo map, para eliminar productos con cantidad en 0 del carrito
+    ).filter((prod)=>prod.quantity > 0));
     const total = getTotalCart()
 
   };
+  //CREAR ORDENES
+ const createOrder = (order)=>{
+    const db = getFirestore()
+    const orders= collection (db, "order")
+    addDoc(orders, order).then((snapshot)=>{
+      setOrder(snapshot.id)
+    })
 
+ }
   return (
     <cartContext.Provider
-      value={{ cart, setCart, addItem, removeItem, clearCart, increaseQuantity, decreaseQuantity, getTotalCart }}
+      value={{ cart, setCart, addItem, removeItem, clearCart, increaseQuantity, decreaseQuantity, getTotalCart, createOrder }}
     >
       {children}
     </cartContext.Provider>

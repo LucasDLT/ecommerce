@@ -5,6 +5,8 @@ import ItemCount from "../ItemCount/ItemCount";
 import ComponentButton from "../ComponentButton/ComponentButton";
 import { productById } from "../../asyncMock";
 import { cartContext } from "../Context/CartContext";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 export function ItemDetail() {
   const [prod, setProd] = useState(null);
@@ -19,11 +21,12 @@ export function ItemDetail() {
   };
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      const product = await productById(id);
-      setProd(product);
-    };
-    fetchProduct();
+    const docRef = doc(db, "products", id )
+    getDoc(docRef)
+    .then((res)=>{
+      setProd({...res.data(), id: res.id})
+    })
+    
   }, [id]);
 
   if (!prod) return <div>Loading...</div>;
@@ -68,7 +71,7 @@ export const DetailItem = styled.div`
   span {
     width: 10rem;
     margin-bottom: 0.2rem;
-    color: white;
+    color: #000000;
   }
 `;
 
@@ -79,7 +82,7 @@ export const ItemInfo = styled.div`
   align-items: center;
   border-radius: 0.5rem;
   text-align: justify;
-  padding: 1rem;
+  padding: 3rem;
   gap: 0.4rem;
   background-color: #00000083;
   height: 25rem;

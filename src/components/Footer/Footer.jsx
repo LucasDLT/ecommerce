@@ -8,15 +8,6 @@ export default function () {
         Lucas Sebastian de la Torre.
       </p>
       <ul>
-        <li>
-          <a href="">Nuestra Historia</a>//cambiarlo con terminos y condiciones
-        </li>
-        <li>
-          <a href="">Contacto</a>
-        </li>
-        <li>
-          <a href="">Ayuda</a>
-        </li>
       </ul>
     </Footer>
   );
@@ -43,6 +34,6 @@ export const Footer = styled.footer`
   );
   position: absolute;
   bottom: 0.1rem;
-  left: 10%;
+  left: 21%;
   border: solid black 1px;
 `;

@@ -1,13 +1,37 @@
-import React from "react";
-import { useParams, Outlet } from "react-router-dom";
-import { productsByCategory } from "../../asyncMock";
+import {React, useEffect, useState, useContext} from "react";
+import { useParams } from "react-router-dom";
 import CardItem from "../CardItem/CardItem";
 import { ProductSection } from "../ItemList/ItemList";
+import { ContextApp } from "../Context/ContextApp";
 import styled from "styled-components";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
+
 
 const CategoryView = () => {
   const { categoryId } = useParams();
-  const filteredProducts = productsByCategory(categoryId);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [products] = useContext(ContextApp); 
+
+  useEffect(() => {
+    if (!categoryId) return;
+
+    const productsRef = collection(db, "products");
+    const q = query(productsRef, where("category", "==", categoryId)); 
+
+    getDocs(q)
+      .then((res) => {
+        setFilteredProducts(
+          res.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id
+          }))
+        );
+      })
+      .catch((error) => {
+        console.error("Error fetching category products: ", error);
+      });
+  }, [categoryId]);
 
   return (
     <CategorySection>

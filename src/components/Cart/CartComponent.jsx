@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
 import { useRef } from "react";
+import { FormDataUser } from "../FormDataUser/FormDataUser";
 
 const ScrollContainer = styled(OverlayScrollbarsComponent)`
   .os-scrollbar-vertical {
@@ -49,15 +50,19 @@ const MessageCart = styled.p`
   font-size: 1.5rem;
   z-index: 2;
   position: relative;
+  
+  ;
 `;
 
 const StyledLink = styled(Link)`
   font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.5rem;
   border-radius: 5px;
-  background-color: #4e4e4e93;
+  background-color: #2a6c2e61;
   position: relative;
   z-index: 2;
+  padding:1rem;
+  margin: 1rem;
 
   &:hover {
     background-color: #80808094;
@@ -112,14 +117,16 @@ const QuantityButton = styled(ComponentButton)`
 `;
 
 const TotalCart = styled.section`
-  position: absolute;
-  left: 87%;
-  top: 50%;
+
   font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.5rem;
   border: 2px grey solid;
   border-radius: 5px;
-  background-color: #4e4e4e93;
+  background-color: #4a7b4dc1;
+  position: absolute;
+  top: -5%;
+  margin-bottom: 1rem;
+  
 `;
 
 const CartContainer = styled.div`
@@ -127,10 +134,19 @@ const CartContainer = styled.div`
   padding: 0.4rem;
   margin: 0.2rem;
   border: black 1px double;
+  
+  button{
+    font-family: "Nightfully Haunted", sans-serif;
+  font-size: 1.2rem;
+  border: 2px grey solid;
+  border-radius: 5px;
+  background-color: #4a7b4dc1;
+  
+  }
 `;
 
 export default function CartComponent() {
-  const { cart, removeItem, clearCart, increaseQuantity, decreaseQuantity, getTotalCart } =
+  const { cart, removeItem, clearCart, increaseQuantity, decreaseQuantity, getTotalCart, createOrder } =
     useContext(cartContext);
 
   const listRef = useRef([]);
@@ -171,6 +187,7 @@ export default function CartComponent() {
       <TitleCart>CARRITO DE COMPRAS</TitleCart>
 
       <Cart>
+     
         {cart.length === 0 ? (
           <>
             <MessageCart>El carrito está vacío</MessageCart>
@@ -215,12 +232,13 @@ export default function CartComponent() {
             </ListCart>
           </ScrollContainer>
         )}
-      </Cart>
-
       <TotalCart>
         <h2>Total: ${getTotalCart()}</h2>
-        <ComponentButton onClick={clearCart}> Vaciar carrito</ComponentButton>
       </TotalCart>
+{   cart.length > 0 &&(     <ComponentButton onClick={clearCart}> Vaciar carrito</ComponentButton>)
+}      <FormDataUser cart={cart} createOrder={createOrder} />
+      </Cart>
+
     </CartContainer>
   );
 }

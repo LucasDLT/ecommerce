@@ -6,16 +6,18 @@ import { cartContext } from "../Context/CartContext";
 
 export default function CartWidget() {
 
-  const {getTotalCart} = useContext(cartContext)//aca estoy extraendo el cart desde el contexto, por lo que cart vale lo que contiene el carrito
+  const {cart, getTotalCart} = useContext(cartContext)//aca estoy extraendo el cart desde el contexto, por lo que cart vale lo que contiene el carrito
 // tuve que cambiar la desestructuracion de corchetes a llaves para que se pueda acceder a los metodos, de lo contrario no me tomaba los cambios al eliminar items individuales
-  return (
+  const total= getTotalCart()
+return (
     <>
-      <Link to={"/cart"}>
+      {total > 0 &&(
+        <Link to={"/cart"}>
         <CartContainer>
           <ItemContainer src={shoppingCart} />
-          <p>$ {getTotalCart()}</p>
+          <p>$ {cart.length}</p>
         </CartContainer>
-      </Link>
+      </Link>)}
     </>
   );
 }

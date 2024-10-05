@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { openList } from "../../asyncMock";
+import { useContext} from "react";
 import CardItem from "../CardItem/CardItem";
 import styled from "styled-components";
 import { ContextApp } from "../Context/ContextApp";

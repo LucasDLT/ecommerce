@@ -37,10 +37,8 @@ export function ItemDetail() {
         <img src={prod.image} alt={prod.title} />
       </div>
       <ItemInfo>
-        <span>{prod.name}</span>
         <span>{prod.description}</span>
-        <span>Categoría: {prod.category}</span>
-        <span>Precio: ${prod.price}</span>
+        <span>PRECIO: ${prod.price}</span>
         
         <ItemCount item={prod} />
         
@@ -86,6 +84,8 @@ export const ItemInfo = styled.div`
   gap: 0.4rem;
   background-color: #00000083;
   height: 25rem;
+  font-weight:bolder;
+  letter-spacing:0.5px;
   > button {
     text-align: center;
     font-size: 1.4rem;

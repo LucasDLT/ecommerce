@@ -6,6 +6,7 @@ import { ContextApp } from "../Context/ContextApp";
 import styled from "styled-components";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/config";
+import { Fade } from "react-awesome-reveal";
 
 
 const CategoryView = () => {
@@ -35,17 +36,20 @@ const CategoryView = () => {
 
   return (
     <CategorySection>
-      <h1>Productos en la categoría: {categoryId}</h1>
-      <ProductSection>
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product, id) => (
-            <CardItem key={id} item={product} />
-          ))
-        ) : (
-          <p>No hay productos en esta categoría.</p>
-        )}
-      </ProductSection>
-    </CategorySection>
+  <h1>Productos en la categoría: {categoryId}</h1>
+  <Fade key={filteredProducts.length} cascade direction="top" duration={2000} triggerOnce={false}>
+    <ProductSection>
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product, id) => (
+          <CardItem key={id} item={product} />
+        ))
+      ) : (
+        <p>No hay productos en esta categoría.</p>
+      )}
+    </ProductSection>
+  </Fade>
+</CategorySection>
+
   );
 };
 

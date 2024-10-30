@@ -2,6 +2,7 @@ import { useContext} from "react";
 import CardItem from "../CardItem/CardItem";
 import styled from "styled-components";
 import { ContextApp } from "../Context/ContextApp";
+import { Zoom } from "react-awesome-reveal";
 
 export default function ItemList() {
 
@@ -11,7 +12,9 @@ export default function ItemList() {
     <ProductContainer>
       <ProductSection>
         {products.map((product, id) => (
+        <Zoom direction="top" duration={2000}>
           <CardItem key={id} item={product} />
+        </Zoom>
         ))}
       </ProductSection>
     </ProductContainer>

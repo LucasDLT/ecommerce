@@ -126,7 +126,8 @@ const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
+  margin-bottom:7rem;
   font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.5rem;
   position: absolute;

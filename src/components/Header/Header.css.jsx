@@ -55,7 +55,7 @@ export const Slogan = styled.h2`
       opacity: 0;
       color: #ffffff !important; 
       transform: translateY(-50px);
-      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      transition: opacity 1s ease-in-out, transform .5s ease-in-out;
 `
       : `
       font-family: 'Nightfully Haunted'; sans-serif;                                 
@@ -69,6 +69,6 @@ export const Slogan = styled.h2`
       justify-content: center;  
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+      transition: opacity 2s ease-in-out, transform .1s ease-in-out;
 `}
 `;

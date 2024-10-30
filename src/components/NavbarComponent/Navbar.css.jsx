@@ -5,6 +5,7 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: right;
   margin-top: 2rem;
+  margin-right:5rem;
   position: relative;
   right: 1rem;
 `;
@@ -13,9 +14,7 @@ export const NavList = styled.ul`
   display: flex;
   align-items: start;
   position: relative;
-  //border-radius: 0.2rem;
-  //box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
-  //background-color: #9adbb744;
+  gap:5rem;
 
   button {
     cursor: pointer;
@@ -57,15 +56,15 @@ export const NavList = styled.ul`
 `;
 export const CategoryList = styled.ul`
   display: flex;
-  margin-top: 0.1rem;
+  margin-top: 0.5rem;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 20%;
   right: 0;
-  gap: 0.1rem;
   justify-content: center;
   align-items: center;
-  max-height: ${({ openCategory, openLine }) => (openCategory || openLine ? "200px" : "0")};
+  max-height: ${({ openCategory, openLine }) => (openCategory || openLine ? "300px" : "0")};
+  width:26rem;
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
 `;
@@ -74,16 +73,11 @@ export const CategoryItem = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
   padding: 1rem;
   cursor: pointer;
   border: none;
-  font-size: 1.3rem;
-  border-radius: 0 0 0.4rem 0.4rem;
+  font-size: 1rem;
   background-color: transparent;
-  //box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.5);
-  //&:hover {
-    //box-shadow: 1px 1px 5px 1px rgba(90, 85, 85, 0.5);
-  //}
+  height:100%;
+
 `;

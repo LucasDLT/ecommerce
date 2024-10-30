@@ -133,9 +133,9 @@ const CartContainer = styled.div`
   background-color: #6d867160;
   padding: 0.4rem;
   margin: 0.2rem;
-  border: black 1px double;
-  
-  button{
+  margin-top:3rem;
+  max-height:73vh;
+    button{
     font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.2rem;
   border: 2px grey solid;

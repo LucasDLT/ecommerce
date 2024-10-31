@@ -11,5 +11,5 @@ export const StockContainer = styled.div`
   align-items: center;
   display: flex;
   border-radius: 0.3rem;
-  width: auto;
+  width: 6.3rem;
 `;

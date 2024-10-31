@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
     top: -6rem;
     left: 0.5rem;
     transform: scale(0.5); 
-    transition: top 1s ease-in-out, left 1s ease-in-out, transform 1s ease-in-out;
+    transition: top 1s ease-in-out, left 1s ease-in-out, transform .5s ease-in-out;
   `
       : `
     display: flex;

@@ -5,6 +5,8 @@ import { useState } from "react";
 import ComponentButton from "../ComponentButton/ComponentButton";
 import StockComponent from "../StockComponent/StockComponent"
 import { toast } from "sonner";
+
+
 export default function ItemCount({ item }) {
   const { addItem, increaseQuantity, decreaseQuantity } = useContext(cartContext);  
 
@@ -41,7 +43,7 @@ export default function ItemCount({ item }) {
         <ComponentButton onClick={handlerAdd}>+</ComponentButton>
         <div>{count}</div>
         <ComponentButton onClick={handlerSubtract}>-</ComponentButton>
-        <StockComponent itemStock={stock}>Unidades disponibles: {stock}</StockComponent>
+        <StockComponent itemStock={stock}>Stock: {stock}</StockComponent>
       </CounterContainer>
     </>
   );
@@ -55,7 +57,15 @@ export const CounterContainer = styled.div`
   padding: 0.2rem;
   margin: 0.3rem;
   border-radius: 0.5rem;
-  background-color: #54a26959;
+  background-color: #2e593ac3;
+  button{
+    cursor: pointer;
+    margin: 5px;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #686c6ac2;
+    width: 30px;
+  }
 `;
 
 export const CustomToast = styled.div`

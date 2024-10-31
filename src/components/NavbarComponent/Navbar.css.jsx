@@ -79,5 +79,4 @@ export const CategoryItem = styled.button`
   font-size: 1rem;
   background-color: transparent;
   height:100%;
-
 `;

@@ -44,7 +44,7 @@ const CategoryView = () => {
           <CardItem key={id} item={product} />
         ))
       ) : (
-        <p>No hay productos en esta categoría.</p>
+        <p></p>
       )}
     </ProductSection>
   </Fade>
@@ -68,6 +68,9 @@ export const CategorySection = styled.section`
   section {
     position: absolute;
     top: 50%;
-    left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 `;

@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ComponentButton from "../ComponentButton/ComponentButton";
+import { Fade } from "react-awesome-reveal";
 
 export default function CardItem({ item }) {
   return (
+    <Fade cascade direction="up">
     <DivCard key={item.id}>
         <ItemImage src={item.image} alt={item.name} />
       <div>
@@ -13,6 +15,7 @@ export default function CardItem({ item }) {
         <Link to={`detail/${item.id}`}> ver detalle</Link>
       </ComponentButton>
     </DivCard>
+    </Fade>
   );
 }
 

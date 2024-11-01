@@ -25,7 +25,7 @@ const ScrollContainer = styled(OverlayScrollbarsComponent)`
 `;
 
 const Cart = styled.section`
-  margin: 0.5rem;
+  margin: 0.7rem;
   padding: 0.5rem;
   margin-top: 3.5rem;
   height: 60vh;
@@ -34,24 +34,16 @@ const Cart = styled.section`
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  background-color: #0000005d;
   border-radius: 5px;
 `;
 
-const TitleCart = styled.h2`
-  font-family: "Nightfully Haunted", sans-serif;
-  font-size: xx-large;
-  margin: 0.5rem;
-  z-index: 2;
-  position: relative;
-`;
 
 const MessageCart = styled.p`
   font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.5rem;
   z-index: 2;
   position: relative;
-  
-  ;
 `;
 
 const StyledLink = styled(Link)`
@@ -61,7 +53,7 @@ const StyledLink = styled(Link)`
   background-color: #2a6c2e61;
   position: relative;
   z-index: 2;
-  padding:1rem;
+  padding: 1rem;
   margin: 1rem;
 
   &:hover {
@@ -86,22 +78,21 @@ const ListCart = styled.ul`
     position: relative;
     font-family: "Nightfully Haunted", sans-serif;
     background-color: transparent;
-    backdrop-filter: blur(2px);
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
     margin-right: 0.7rem;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
-    transform: scale(0.8); 
-    opacity: 0; 
-    
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transform: scale(0.8);
+    opacity: 0;
+    border-bottom: solid 1px black;
+
     &.visible {
       transform: scale(1);
-      opacity: 1; 
+      opacity: 1;
     }
-    
+
     button {
       font-family: "Nightfully Haunted", sans-serif;
       font-size: 1.4rem;
+      cursor: pointer;
     }
     img {
       width: 5rem;
@@ -117,53 +108,64 @@ const QuantityButton = styled(ComponentButton)`
 `;
 
 const TotalCart = styled.section`
-
   font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.5rem;
-  border: 2px grey solid;
   border-radius: 5px;
-  background-color: #4a7b4dc1;
+  background-color: #28422aa6;
   position: absolute;
-  top: -5%;
+  top: -10%;
+  left: 1px;
   margin-bottom: 1rem;
-  
+  padding: 0.5rem;
 `;
 
 const CartContainer = styled.div`
-  background-color: #6d867160;
-  padding: 0.4rem;
   margin: 0.2rem;
-  margin-top:3rem;
-  max-height:73vh;
-    button{
-    font-family: "Nightfully Haunted", sans-serif;
-  font-size: 1.2rem;
-  border: 2px grey solid;
+  margin-top: 6rem;
+  max-height: 73vh;
   border-radius: 5px;
-  background-color: #4a7b4dc1;
-  
+  position: relative;
+  .clearCart {
+    font-family: "Nightfully Haunted", sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #28422aa6;
+    position: absolute;
+    top: -10%;
+    left: 89.7%;
+    width: 7rem;
+    height: 2.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
   }
 `;
 
 export default function CartComponent() {
-  const { cart, removeItem, clearCart, increaseQuantity, decreaseQuantity, getTotalCart, createOrder } =
-    useContext(cartContext);
+  const {
+    cart,
+    removeItem,
+    clearCart,
+    increaseQuantity,
+    decreaseQuantity,
+    getTotalCart,
+    createOrder,
+  } = useContext(cartContext);
 
   const listRef = useRef([]);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible"); 
+            entry.target.classList.add("visible");
           } else {
-            entry.target.classList.remove("visible"); 
+            entry.target.classList.remove("visible");
           }
         });
       },
       {
-        threshold: 0.1, 
+        threshold: 0.1,
       }
     );
 
@@ -179,15 +181,14 @@ export default function CartComponent() {
   }, [cart]);
 
   if (!Array.isArray(cart)) {
-    return <div>No se inicia el carrito debido a un error de lectura del mismo</div>;
+    return (
+      <div>No se inicia el carrito debido a un error de lectura del mismo</div>
+    );
   }
 
   return (
     <CartContainer>
-      <TitleCart>CARRITO DE COMPRAS</TitleCart>
-
       <Cart>
-     
         {cart.length === 0 ? (
           <>
             <MessageCart>El carrito está vacío</MessageCart>
@@ -232,13 +233,14 @@ export default function CartComponent() {
             </ListCart>
           </ScrollContainer>
         )}
-      <TotalCart>
-        <h2>Total: ${getTotalCart()}</h2>
-      </TotalCart>
-{   cart.length > 0 &&(     <ComponentButton onClick={clearCart}> Vaciar carrito</ComponentButton>)
-}      <FormDataUser cart={cart} createOrder={createOrder} />
+        <TotalCart>
+          <h2>Total: ${getTotalCart()}</h2>
+        </TotalCart>
+        {cart.length > 0 && (
+          <ComponentButton className="clearCart" onClick={clearCart}> Vaciar carrito</ComponentButton>
+        )}{" "}
+        <FormDataUser cart={cart} createOrder={createOrder} />
       </Cart>
-
     </CartContainer>
   );
 }

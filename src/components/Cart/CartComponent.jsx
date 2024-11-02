@@ -34,8 +34,9 @@ const Cart = styled.section`
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  background-color: #0000005d;
-  border-radius: 5px;
+  box-shadow: 0 4px 9px rgb(0, 0, 0);
+  background-color: #596759a4;
+  border-radius: 10px;
 `;
 
 
@@ -52,13 +53,13 @@ const StyledLink = styled(Link)`
   border-radius: 5px;
   background-color: #2a6c2e61;
   position: relative;
+  left: 40%;
   z-index: 2;
   padding: 1rem;
   margin: 1rem;
-
   &:hover {
-    background-color: #80808094;
-  }
+    box-shadow: 0 4px 9px rgb(0, 0, 0) ;
+    transition: all 0.5s ease;}
 `;
 
 const ListCart = styled.ul`
@@ -93,6 +94,7 @@ const ListCart = styled.ul`
       font-family: "Nightfully Haunted", sans-serif;
       font-size: 1.4rem;
       cursor: pointer;
+     
     }
     img {
       width: 5rem;
@@ -125,6 +127,7 @@ const CartContainer = styled.div`
   max-height: 73vh;
   border-radius: 5px;
   position: relative;
+  
   .clearCart {
     font-family: "Nightfully Haunted", sans-serif;
     font-size: 1.2rem;
@@ -189,9 +192,8 @@ export default function CartComponent() {
   return (
     <CartContainer>
       <Cart>
-        {cart.length === 0 ? (
+       {cart.length === 0 ? (
           <>
-            <MessageCart>El carrito está vacío</MessageCart>
             <StyledLink to={"/item"}>Regresar al Menú</StyledLink>
           </>
         ) : (

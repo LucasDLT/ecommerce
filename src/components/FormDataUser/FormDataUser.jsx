@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { cartContext } from "../Context/CartContext";
 import { useNavigate } from "react-router-dom";
 
-
 export const FormDataUser = ({ cart, createOrder }) => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -14,7 +13,7 @@ export const FormDataUser = ({ cart, createOrder }) => {
   const [address, setAddress] = useState("");
   const [error, setError] = useState("");
 
-  const {clearCart}=useContext(cartContext)
+  const { clearCart } = useContext(cartContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -47,8 +46,8 @@ export const FormDataUser = ({ cart, createOrder }) => {
       setAddress("");
       setError("");
 
-      clearCart()
-      navigate('/item')
+      clearCart();
+      navigate("/item");
     } catch (err) {
       setError("Hubo un error al crear la orden, inténtalo nuevamente.");
       console.error(err);
@@ -126,79 +125,86 @@ const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  margin-bottom:7rem;
+  flex-direction: column;
+  height: 59.3vh;
+  width: 20rem;
   font-family: "Nightfully Haunted", sans-serif;
   font-size: 1.5rem;
   position: absolute;
   right: -35%;
+  top: -0%;
+  box-shadow: 0 4px 9px rgb(0, 0, 0);
+  background-color: #596759a4;
+  border-radius: 10px;
+  padding: 1%;
 
-  button{
-          font-family: "Nightfully Haunted", sans-serif;
-          font-size: 1.5rem;
-          cursor:pointer;
-          border: solid 1px black;
-          border-radius: 5px;
-          &:hover{
-                    background-color: #509187;
-          }
+  button {
+    font-family: "Nightfully Haunted", sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    background-color: #50916b;
+    &:hover {
+      &:hover {
+    box-shadow: 0 4px 9px rgb(0, 0, 0) ;
+    transition: all 0.5s ease;}
     }
+  }
 `;
 
 const Form = styled.form`
-  background-color: #f9f9f9;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  width: 100%;
-  background-color: transparent;
-    backdrop-filter: blur(2px);
-   
+  gap: 2rem;
+
 `;
 
 const FormGroup = styled.div`
   position: relative;
-  margin-bottom: 2rem;
+  left: -3%;
 `;
 
 const Input = styled.input`
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
+  margin: 1px;
   font-size: 1rem;
-  border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
   transition: all 0.2s ease;
-  background-color: transparent;
+  background-color: #909b9160;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
 
-  &:focus {
-    border-color: #03591c;
-  }
+  
 
   &:focus + label {
-          top: -1rem;
+    top: -1rem;
     font-size: 1.5rem;
-    color: #000001;
   }
 
   &.filled + label {
     top: -1rem;
     font-size: 1.5rem;
-    color: #000001;
   }
 `;
 
 const Label = styled.label`
   position: absolute;
   top: 50%;
-  left: 10px;
   transform: translateY(-50%);
-  font-size: 1.5rem;
-  color: #000000;
+  font-size: 1.2rem;
   pointer-events: none;
   transition: all 0.2s ease;
   padding: 0 5px;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
 
   &.active {
     top: -1rem;
@@ -206,4 +212,3 @@ const Label = styled.label`
     color: #000000;
   }
 `;
-
